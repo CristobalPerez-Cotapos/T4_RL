@@ -12,7 +12,6 @@ for _ in range(1000):
     action = random.choice([0, 1, 2])
     observation, reward, terminated, truncated, info = env.step(action)
     obs_features = feature_extractor.get_features(observation)
-    print(obs_features)
 
     if terminated or truncated:
         observation, info = env.reset()
